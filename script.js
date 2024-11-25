@@ -23,6 +23,9 @@ function removePetal() {
         daisy.removeChild(petal);
         petalCount--;   
 
+        // Ajustar la velocidad de reproducción del audio según los pétalos restantes
+        audio.playbackRate = 1 + (14 - petalCount) /5;
+
         if (petalCount === 0) {
             document.getElementById('name').classList.add('double-size');
             daisy.remove(); // Elimina el elemento daisy
