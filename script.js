@@ -27,6 +27,11 @@ function removePetal() {
             document.getElementById('name').classList.add('double-size');
             daisy.remove(); // Elimina el elemento daisy
             document.getElementById('name').innerText ='¡Vera!';
+            
+        // Cambiar el audio a "succed.mp3" y reproducirlo una vez
+        audio.src = 'succed.mp3';
+        audio.loop = false; // Asegurarse de que no se repita
+        audio.play();
 
         }   
 }
@@ -36,3 +41,10 @@ function toggleName() {
     currentName = currentName === 'Vera' ? 'Leo' : 'Vera';
     document.getElementById('name').innerText = currentName;
 }
+
+window.addEventListener('load', function() {
+    var audio = document.getElementById('background-audio');
+    audio.play();
+    audio.playbackRate = 0.7;
+
+});
