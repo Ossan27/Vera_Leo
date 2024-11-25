@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function removePetal() {
     const daisy = document.getElementById('daisy');
+    const audio = document.getElementById('background-audio');
+
     if (petalCount > 0) {
         const petals = daisy.getElementsByClassName('petal');
         const randomIndex = Math.floor(Math.random() * petals.length);
@@ -24,20 +26,20 @@ function removePetal() {
         petalCount--;   
 
         // Ajustar la velocidad de reproducción del audio según los pétalos restantes
-        audio.playbackRate = 1 + (14 - petalCount) /5;
+        audio.playbackRate = 0.7 + (14 - petalCount) /10;
 
         if (petalCount === 0) {
             document.getElementById('name').classList.add('double-size');
             daisy.remove(); // Elimina el elemento daisy
             document.getElementById('name').innerText ='¡Vera!';
-            
+
         // Cambiar el audio a "succed.mp3" y reproducirlo una vez
         audio.src = 'succed.mp3';
         audio.loop = false; // Asegurarse de que no se repita
         audio.play();
 
         }   
-}
+    }
 }
 
 function toggleName() {
