@@ -1,0 +1,72 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+    background: #a1f68b; /* Color de fondo del cielo */
+    background-image: 
+        radial-gradient(circle at 20% 20%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 80% 30%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 50% 50%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 30% 70%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 70% 80%, #fff, rgba(255, 255, 255, 0) 50%);
+}
+
+.double-size {
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 4rem; /* Aumenta el tamaño de la fuente */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+
+.daisy {
+    width: 200px;
+    height: 200px;
+    /* background: url('daisy.png') no-repeat center center; */
+    background-size: contain;
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.petal {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background: whitesmoke; /* Cambia el color de fondo a blanco */
+    border-radius: 50% 50% 50% 60%; /* Deforma el pétalo para que tenga una parte superior redondeada y una parte inferior puntiaguda */
+    transform-origin:  center;
+    border: 2px solid black; /* Añade un borde negro de 2px */
+    transform: scaleX(1.2); /* Escala el pétalo horizontalmente para darle una forma más triangular */
+}
+
+
+.center {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    background: yellow; /* Color de fondo para el centro de la margarita */
+    border-radius: 50%; /* Hace que el elemento sea circular */
+    border: 2px solid black; /* Añade un borde negro de 2px */
+    z-index: 1; /* Asegura que el centro esté por encima de los pétalos */
+}
+
+#name {
+    color: #333; /* Ajusta el color según tus preferencias */
+}
