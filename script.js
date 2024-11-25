@@ -26,7 +26,7 @@ function removePetal() {
         if (petalCount === 0) {
             document.getElementById('name').classList.add('double-size');
             daisy.remove(); // Elimina el elemento daisy
-            document.getElementById('name').innerText ='¡Leo!';
+            document.getElementById('name').innerText ='¡Vera!';
 
         }   
 }
